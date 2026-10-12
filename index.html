@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전략적 마케팅 제안서 기획안 & A/A+ 계약 프레임워크</title>
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -44,19 +44,20 @@
 </head>
 <body class="bg-warmbg text-slate-800 font-sans antialiased leading-relaxed min-h-screen flex flex-col">
 
-    <!-- Chosen Palette: Slate & Amber Trust Palette (Slate main, Warm Neutral background, Amber/Indigo/Emerald functional accents) -->
+    <!-- Chosen Palette: Slate & Warm Gold Executive Trust Palette (Warm neutral background #FAF9F6, Slate primary #1E293B, Amber/Emerald/Indigo functional accents) -->
     <!-- Application Structure Plan: 
-         1. Executive Hero & Overview: Strategic Title, Slogan, Core Client Pain Point Diagnosis.
-         2. Strategic Storyline Flowchart: Step-by-step logic from diagnosis to solution and closing.
-         3. Slide Deck Planner (Core): Slide-by-slide detailed plan with Title, Key Message, Content, Rationale.
-         4. Interactive Proposal Calculator (Decoy Effect Simulator): A vs A+ ROI & Perceived Value comparison + Media Spend breakdown logic.
-         5. Contract Framework Viewer: Built-in contract clause review for both A and A+ options.
-         This structure ensures the CEO can review both the pitch narrative logic and the practical proposal deliverables in one seamless experience. -->
+         1. Executive Hero Banner: High-impact summary of pitch positioning, Decoy Effect rationale, and core benefits.
+         2. Strategic Overview & Diagnosis (Section 1): Deep-dive into client pain points (Flyline) and strategic counter-arguments.
+         3. Pitch Storyline Sequence Flowchart (Section 2): Step 1 through Step 8 interactive narrative architecture.
+         4. Detailed Slide Deck Planner (Section 3): Interactive slide-by-slide dashboard with headlines, key messages, content, and strategic intents.
+         5. Plan Comparison & Media Simulator (Section 4): Chart.js visualizations for Ad Fatigue (CTR/CPA) & Media Allocation, plus interactive Decoy ROI Calculator and comprehensive A vs A+ matrix table.
+         6. Legal Contract Framework (Section 5): Full interactive review of agreement terms including duration, ad spend separation, IP rights, and termination clauses.
+         This logical information flow moves decision-makers from psychological reassurance to structural trust and clear ROI justification. -->
     <!-- Visualization & Content Choices: 
-         - Ad Fatigue Line Chart (Chart.js): Static Banner vs Video Creative CTR/CPA over time to visually prove why A+ video creation is mandatory.
-         - Media Mix Donut Chart (Chart.js): Visualization of media spend allocation (Meta priority vs Naver defense vs Google hold).
-         - Interactive Slide Navigator (HTML/JS): Toggle through 8 distinct slides with full pitch blueprints.
-         - Plan Value Comparison Matrix (HTML/Tailwind): Interactive comparison table highlighting A+ savings & value.
+         - Ad Fatigue Line Chart (Chart.js): Static Banner vs Video Creative performance decay over 8 weeks to visually mandate video creative inclusions.
+         - Media Mix Allocation Donut Chart (Chart.js): Visual distribution of budget (Meta priority vs Naver search defense vs Google holding).
+         - Interactive Slide Navigator (HTML/JS): Toggle bar and next/prev controls to explore all 8 pitch slides.
+         - Decoy ROI Simulator (HTML/JS): Interactive slider allowing CEO/Client to simulate performance impact of A vs A+ plans based on ad spend.
          - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
@@ -67,7 +68,7 @@
                 <span class="text-amber-400 font-bold text-xl">💎 Gem Strategy Lab</span>
                 <span class="hidden md:inline-block text-xs bg-slate-700 px-2.5 py-1 rounded-full text-slate-300">광고·모델 에이전시 전담 기획실</span>
             </div>
-            <nav class="flex space-x-2 sm:space-x-4 text-xs sm:text-sm font-medium">
+            <nav class="flex space-x-1 sm:space-x-3 text-xs sm:text-sm font-medium">
                 <button onclick="scrollToSection('analysis')" class="hover:text-amber-400 transition-colors px-2 py-1">진단 및 개요</button>
                 <button onclick="scrollToSection('flow')" class="hover:text-amber-400 transition-colors px-2 py-1">제안 스토리 흐름</button>
                 <button onclick="scrollToSection('slides')" class="hover:text-amber-400 transition-colors px-2 py-1">슬라이드별 기획</button>
@@ -202,7 +203,7 @@
                 <div class="bg-cardbg p-4 rounded-xl border border-slate-200 shadow-sm relative space-y-2">
                     <div class="text-xs font-bold text-amber-600 bg-amber-100 px-2 py-0.5 rounded w-max">STEP 05</div>
                     <h4 class="font-bold text-slate-900 text-sm">A/A+ 옵션 비교 (Anchor)</h4>
-                    <p class="text-xs text-slate-600">300만 원 기본형(A안) 제시로 합리적 가격</p>
+                    <p class="text-xs text-slate-600">300만 원 기본형(A안) 제시로 합리적 가격 기준 형성</p>
                 </div>
 
                 <div class="bg-cardbg p-4 rounded-xl border border-slate-200 shadow-sm relative space-y-2">
@@ -253,6 +254,68 @@
             <div class="border-l-4 border-amber-500 pl-4">
                 <h2 class="text-xl sm:text-2xl font-bold text-primary">4. A/A+ 비교 및 매체 예산 시뮬레이터 (Decoy Effect)</h2>
                 <p class="text-slate-600 text-sm mt-1">왜 A+안(500만 원)이 단순한 지출이 아니라 매체비 누수를 막는 유일한 솔루션인지 증명합니다.</p>
+            </div>
+
+            <!-- Decoy Effect Interactive ROI Simulator -->
+            <div class="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-lg space-y-6">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <span class="text-xs text-amber-400 font-bold uppercase tracking-wider">Interactive Decoy Calculator</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-white mt-1">🧮 대행 수수료 대비 체감 실질 가치 계산기</h3>
+                    </div>
+                    <div class="bg-slate-800 border border-slate-700 px-4 py-2 rounded-xl text-xs text-slate-300">
+                        월 예상 매체비: <span id="spendDisplay" class="text-amber-400 font-bold text-sm">월 1,500,000원</span>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-xs text-slate-300 font-medium flex justify-between">
+                        <span>예상 월 광고 매체비 설정 (슬라이더 조절)</span>
+                        <span class="text-amber-400">100만 원 ~ 1,000만 원</span>
+                    </label>
+                    <input type="range" id="spendRange" min="1000000" max="10000000" step="500000" value="1500000" 
+                           class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-amber-500" 
+                           oninput="updateCalculator()">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                    <!-- Option A Box -->
+                    <div class="bg-slate-800/90 p-5 rounded-xl border border-slate-700 space-y-3">
+                        <div class="flex justify-between items-center border-b border-slate-700 pb-2">
+                            <span class="font-bold text-slate-200 text-sm">A안 (기본 집행)</span>
+                            <span class="text-sm font-semibold text-slate-400">수수료 300만 원</span>
+                        </div>
+                        <div class="text-xs space-y-1.5 text-slate-300">
+                            <p class="flex justify-between"><span>외부 영상 외주 비용:</span> <span class="text-red-400 font-semibold">+250만 원 (별도 발생)</span></p>
+                            <p class="flex justify-between"><span>예상 클릭률 (CTR):</span> <span class="text-slate-300">평균 1.2% (소재 피로도 감퇴)</span></p>
+                            <p class="flex justify-between"><span>랜딩페이지 테스트:</span> <span>A/B 2원화</span></p>
+                        </div>
+                        <div class="p-3 bg-slate-900/80 rounded-lg text-xs font-bold text-slate-300 border border-slate-800">
+                            총 실질 수수료 부담: <span class="text-red-400 font-extrabold text-sm ml-1">월 550만 원 상당</span>
+                        </div>
+                    </div>
+
+                    <!-- Option A+ Box -->
+                    <div class="bg-gradient-to-br from-amber-950/40 via-slate-800 to-indigo-950/60 p-5 rounded-xl border-2 border-amber-500/80 space-y-3 relative overflow-hidden">
+                        <div class="absolute -right-8 -top-8 bg-amber-500 text-slate-950 text-[10px] font-black uppercase px-8 py-1 rotate-45 shadow-md">
+                            RECOMMENDED
+                        </div>
+                        <div class="flex justify-between items-center border-b border-slate-700 pb-2">
+                            <span class="font-bold text-amber-300 text-sm flex items-center gap-1">
+                                👑 A+안 (성과 극대화)
+                            </span>
+                            <span class="text-sm font-extrabold text-amber-400">수수료 500만 원</span>
+                        </div>
+                        <div class="text-xs space-y-1.5 text-slate-200">
+                            <p class="flex justify-between"><span>외부 영상 외주 비용:</span> <span class="text-emerald-400 font-bold">0원 (전액 대행사 제공)</span></p>
+                            <p class="flex justify-between"><span>예상 클릭률 (CTR):</span> <span class="text-emerald-400 font-bold">평균 3.5% (2.9배 증대)</span></p>
+                            <p class="flex justify-between"><span>랜딩페이지 테스트:</span> <span class="text-indigo-300 font-semibold">A/B/C/D 4원화</span></p>
+                        </div>
+                        <div class="p-3 bg-amber-500/20 rounded-lg text-xs font-bold text-amber-200 border border-amber-500/40">
+                            체감 순 절감 가치: <span class="text-amber-400 font-extrabold text-sm ml-1" id="savingsDisplay">월 300만 원+ 이득</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -323,7 +386,7 @@
                             <tr>
                                 <td class="p-3 sm:p-4 font-bold text-slate-900">사전 인프라 세팅</td>
                                 <td class="p-3 sm:p-4 bg-slate-50">SEO, 포털 등록, UTM, GA4, UI/UX 자문</td>
-                                <td class="p-3 sm:p-4 bg-amber-50/40 font-semibold">A안 항목 일체 포함 + 전자상거래 고도화</td>
+                                <td class="p-3 sm:p-4 bg-amber-50/40 font-semibold">A안 항목 일체 포함 + UI/UX 자문 + 웹사이트 '홈' 페이지 리뉴얼 </td>
                                 <td class="p-3 sm:p-4 text-xs">전환 데이터 추적 체계 구축 완비</td>
                             </tr>
                             <tr>
@@ -340,14 +403,14 @@
                             </tr>
                             <tr>
                                 <td class="p-3 sm:p-4 font-bold text-slate-900">인플루언서 섭외</td>
-                                <td class="p-3 sm:p-4 bg-slate-50">10만 메가 1인 or 1만 10인 (피드+릴스)</td>
-                                <td class="p-3 sm:p-4 bg-amber-50/40">10만 메가 1인 or 1만 10인 (피드+릴스)</td>
-                                <td class="p-3 sm:p-4 text-xs">섭외 관리비 대행 수수료 전액 포함</td>
+                                <td class="p-3 sm:p-4 bg-slate-50">총 10만 팔로워 보장 (피드)</td>
+                                <td class="p-3 sm:p-4 bg-amber-50/40">총 100만 팔로워 보장 (피드+릴스)</td>
+                                <td class="p-3 sm:p-4 text-xs">섭외 관리비 대행 수수료 전액 포함(별도 비용 발생 시 협의 후 진행)</td>
                             </tr>
                             <tr>
                                 <td class="p-3 sm:p-4 font-bold text-slate-900">언론 홍보 (PR)</td>
-                                <td class="p-3 sm:p-4 bg-slate-50">월 1회 배포 (총 3회)</td>
-                                <td class="p-3 sm:p-4 bg-amber-50/40 font-bold text-emerald-700">월 2회 배포 (총 6회 송출 보장)</td>
+                                <td class="p-3 sm:p-4 bg-slate-50">총 1회 배포 (총 3회)</td>
+                                <td class="p-3 sm:p-4 bg-amber-50/40 font-bold text-emerald-700">총 2회 배포(원고 대필 포함)</td>
                                 <td class="p-3 sm:p-4 text-xs">포털 상위 노출 및 브랜드 공신력 확보</td>
                             </tr>
                         </tbody>
@@ -364,38 +427,53 @@
             </div>
 
             <div class="bg-cardbg rounded-xl p-6 border border-slate-200 shadow-sm space-y-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs sm:text-sm">
                     <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 space-y-2">
-                        <div class="font-bold text-slate-900 flex items-center space-x-1">
-                            <span class="text-amber-500">📜</span>
+                        <div class="font-bold text-slate-900 flex items-center space-x-1.5">
+                            <span class="text-amber-500 text-base">📜</span>
                             <span>제2조 (계약 기간 및 약정)</span>
                         </div>
-                        <p class="text-slate-600">최소 3개월 의무 약정 적용. 머신러닝 데이터 축적 및 초기 안착을 위한 최소 기간이며, 만료 30일 전 해지 통보가 없을 경우 동일 조건 자동 연장.</p>
+                        <p class="text-slate-600 text-xs">최소 3개월 의무 약정 적용. 머신러닝 데이터 축적 및 초기 안착을 위한 최소 기간이며, 만료 30일 전 해지 통보가 없을 경우 동일 조건 자동 연장.</p>
                     </div>
 
                     <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 space-y-2">
-                        <div class="font-bold text-slate-900 flex items-center space-x-1">
-                            <span class="text-emerald-600">💳</span>
-                            <span>제5조 (매체비 분리 및 카드 직접 결제)</span>
+                        <div class="font-bold text-slate-900 flex items-center space-x-1.5">
+                            <span class="text-emerald-600 text-base">💳</span>
+                            <span>제5조 (매체비 분리 및 카드 결제)</span>
                         </div>
-                        <p class="text-slate-600">대행 수수료와 매체비는 완전 분리. 메타/네이버 광고 계정에 광고주 법인/개인 카드 직접 등록하여 매체사에서 실비 자동 과금.</p>
+                        <p class="text-slate-600 text-xs">대행 수수료와 매체비는 완벽히 분리. 메타/네이버 광고 계정에 광고주 법인/개인 카드 직접 등록하여 매체사에서 실비 자동 과금.</p>
                     </div>
 
                     <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 space-y-2">
-                        <div class="font-bold text-slate-900 flex items-center space-x-1">
-                            <span class="text-indigo-600">📹</span>
+                        <div class="font-bold text-slate-900 flex items-center space-x-1.5">
+                            <span class="text-indigo-600 text-base">📹</span>
                             <span>제7조 (저작권 및 성과물 귀속)</span>
                         </div>
-                        <p class="text-slate-600">제작된 영상, 배너, 카피라이팅, 랜딩 기획안의 이용 권한은 계약 기간 동안 배타적 부여. 계약 종료 후에도 라이브 상태 유지 가능.</p>
+                        <p class="text-slate-600 text-xs">제작된 영상, 배너, 카피라이팅, 랜딩 기획안의 이용 권한은 계약 기간 동안 배타적 부여. 계약 종료 후에도 기존 배포 라이브 상태 유지 가능.</p>
                     </div>
 
                     <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 space-y-2">
-                        <div class="font-bold text-slate-900 flex items-center space-x-1">
-                            <span class="text-red-500">⚖️</span>
+                        <div class="font-bold text-slate-900 flex items-center space-x-1.5">
+                            <span class="text-red-500 text-base">⚖️</span>
                             <span>제9조 (계약 해지 및 위약금)</span>
                         </div>
-                        <p class="text-slate-600">① 광고주는 3개월의 의무약정 기간 중 본 계약을 언제든지 해지할 수 있습니다.
-② 단, 해지 희망일로부터 30일 이전에 통보하지 않는 경우에는, 당사에서 초기 인프라 구축 및 실비에 실제 투자·투여한 비용 등을 감안하여 잔여 약정 기간 수수료의 80%를 위약금으로 설정합니다.</p>
+                        <p class="text-slate-600 text-xs">3개월 의무 약정 기간 내 광고주의 단순 변심 등 일방 해지 시, 선투입 인력 및 제작 공수를 감안하여 잔여 약정 수수료의 30% 위약금 설정.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 space-y-2">
+                        <div class="font-bold text-slate-900 flex items-center space-x-1.5">
+                            <span class="text-blue-600 text-base">🔒</span>
+                            <span>제12조 (비밀 유지 의무)</span>
+                        </div>
+                        <p class="text-slate-600 text-xs">본 계약 수행 과정에서 취득한 상호 간의 고객 정보, 단가표, 내부 마케팅 데이터는 계약 종료 후 2년간 엄격히 비밀 유지를 준수함.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 space-y-2">
+                        <div class="font-bold text-slate-900 flex items-center space-x-1.5">
+                            <span class="text-purple-600 text-base">📊</span>
+                            <span>제14조 (정기 데이터 리포팅)</span>
+                        </div>
+                        <p class="text-slate-600 text-xs">대행사는 주간 실적 요약표 및 월간 상세 종합 리포트(ROAS, CPA, CVR 분석 포함)를 정해진 일정 내 광고주에게 제출함.</p>
                     </div>
                 </div>
             </div>
@@ -422,11 +500,11 @@
                 headline: "브랜드의 가치를 숫자로 증명하는 퍼포먼스 마케팅 파트너십",
                 keyMessage: "단순 대행사가 아닌, 고객의 예산 누수를 방지하고 비즈니스 성장을 견인하는 총괄 파트너 구축",
                 content: [
-                    "• 사전 인프라 세팅(SEO, 포털 등록, GA4/UTM, UI/UX 자문)부터 매체 운영까지 일체화된 관리",
+                    "• 사전 인프라 세팅(SEO, 포털 등록, GA4/UTM)부터 매체 운영까지 일체화된 관리",
                     "• 투명성을 극대화한 '대행 수수료 vs 매체비' 완전 분리 정책 선언",
                     "• 초기 자금 부담 완화를 위한 신용카드 무이자/다개월 할부 시스템 지원 명시"
                 ],
-                intent: "속임수 없는 투명한 운영, 오직 광고주의 성과만을 생각하는 애드플랜터스의 핵심 원칙입니다."
+                intent: "클라이언트(필라인)가 가지고 있는 '대행사가 수수료나 매체비에서 마진을 몰래 챙길 것'이라는 근원적 불신을 첫 장부터 완벽히 해소하고 전문 파트너로서의 격을 정립함."
             },
             {
                 id: 2,
@@ -438,7 +516,7 @@
                     "• 단일 랜딩페이지의 한계: 유입 타깃의 니즈와 랜딩 소구점이 불일치할 때 이탈률 90% 이상 기록",
                     "• 솔루션: 지속적인 숏폼/비디오 소재 공급과 다변화된 랜딩페이지 분할 테스트 필수"
                 ],
-                intent: "단순 노출을 넘어 전환을 이끄는 알고리즘 최적화 전략: 왜 이미지 배너를 넘어 전문 영상 콘텐츠가 필수적인가?"
+                intent: "클라이언트에게 당사의 전문적인 알고리즘 분석 능력을 보여주고, 왜 단순 이미지 배너(A안)보다 전문 영상 제작이 포함된 A+안이 필수적인지 논리적 복선을 깔아둠."
             },
             {
                 id: 3,
@@ -450,7 +528,7 @@
                     "• 정산의 명확성: 대행 수수료(월 고정 용역비)에 대해서만 정식 세금계산서 발행 또는 카드 결제",
                     "• 광고주 혜택: 카드사 포인트 적립, 법인 실적 달성, 현금 유동성 확보"
                 ],
-                intent: "모든 예산은 오직 성과만을 위해 집행됩니다: 합리적인 기준으로 증명하는 비용의 투명성."
+                intent: "비용 투명성에 대한 완벽한 확신을 제공함으로써 견적 금액에 대한 거부감을 줄이고 즉각적인 신뢰를 획득함."
             },
             {
                 id: 4,
@@ -462,7 +540,7 @@
                     "• 네이버 SA [키워드 방어]: 월 30만 원 수준 (브랜드 및 핵심 상표 검색어 방어)",
                     "• 구글 광고 [홀딩 권고]: 알고리즘 머신러닝에 최소 월 200만 원 이상 소요되므로 초기엔 보수적 유보"
                 ],
-                intent: "광고비를 많이 쓰게 하는 대행사가 아닙니다. 광고주의 자본 효율성을 가장 먼저 보호하는 파트너입니다."
+                intent: "대행사가 무조건 광고비를 많이 쓰게 만드는 것이 아니라, 광고주의 자본 효율성을 주도적으로 보호해 준다는 진정성을 어필함."
             },
             {
                 id: 5,
@@ -474,7 +552,7 @@
                     "• 이벤트 & UI/UX: 런칭 프로모션 기획 및 웹사이트 UI/UX 디벨롭 자문",
                     "• 인플루언서 믹스: 10만 메가 인플루언서 1명(100만 원) or 1만 마이크로 10명(100만 원) 유동적 배분 (피드+릴스)"
                 ],
-                intent: "단순한 광고 집행을 넘어, 브랜드가 스스로 성장할 수 있는 기초 체력을 만듭니다."
+                intent: "광고만 돌리는 대행사와 달리, 브랜드의 온보딩 전체 체력을 키워주는 차별화된 총괄 파트너임을 각인시킴."
             },
             {
                 id: 6,
@@ -483,10 +561,10 @@
                 keyMessage: "월 300만 원(A안 - 실무 기준점) vs 월 500만 원(A+안 - 성과 극대화 추천)",
                 content: [
                     "• A안 (월 300만 원): 사전 준비 + 퍼포먼스 광고 운영 + 인플루언서 섭외 + 언론보도 월 1회 + A/B 랜딩 테스트",
-                    "• A+안 (월 500만 원): A안 전체 + 고품질 전문 숏폼/영상 기획·제작 + 언론보도 월 2회 + A/B/C/D 4원화 랜딩 테스트",
+                    "• A+안 (월 500만 원): A안 전체 + 고품질 전문 숏폼/영상 콘텐츠 기획·제작 + 언론보도 월 2회 + A/B/C/D 4원화 랜딩 테스트",
                     "• 공통 혜택: 3개월 의무 약정, 신용카드 3~12개월 할부 결제 지원"
                 ],
-                intent: "단 200만 원의 차이, 그러나 브랜드가 얻게 될 성과의 크기는 비교할 수 없습니다."
+                intent: "A안(300만 원)을 통해 합리적인 가격 기준점(Anchor)을 제공하고, 200만 원 차액으로 영상 제작과 4원화 랜딩 및 PR 2회가 추가되는 A+안의 압도적 가성비를 체감하게 만듦."
             },
             {
                 id: 7,
@@ -498,7 +576,7 @@
                     "• A+안 선택 시: 영상 제작비 전액 포함 + 메타 알고리즘 맞춤 릴스/모션그래픽 정기 공급",
                     "• A/B/C/D 4원화 랜딩 테스트: 후킹 영상 소재와 결합하여 최저 CPA(고객 획득 단가) 달성"
                 ],
-                intent: "단순한 비용 지출이 아닙니다. 400만 원 상당의 핵심 마케팅 인프라를 절반의 예산으로 내재화할 기회입니다."
+                intent: "클라이언트에게 200만 원 증액은 지출 증가가 아니라 시장가 400만 원 상당의 영상 제작 및 홍보 패키지를 50% 할인하여 내재화하는 최고의 기회임을 확신시킴."
             },
             {
                 id: 8,
@@ -511,7 +589,7 @@
                     "• 3개월 차: 종합 CVR/CPA 데이터 리포팅 + 구글 광고 확장 여부 미팅 + 2분기 액션플랜 수립",
                     "• 결제 편의: 세금계산서 계좌이체 또는 법인/개인 신용카드 분할 결제 지원"
                 ],
-                intent: "불확실성은 지우고 확신만 남깁니다: 즉시 실행 가능한 로드맵과 유연한 재무적 안심 장치."
+                intent: "구체적인 로드맵과 신용카드 할부라는 재무적 안심 장치를 제공하여 미팅 현장에서 애드플랜터스의 전폭적 지원과 함께 계약 수락을 끌어냄."
             }
         ];
 
@@ -524,7 +602,7 @@
                 const btn = document.createElement('button');
                 btn.className = `px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
                     idx === currentSlideIndex 
-                        ? 'bg-amber-500 text-slate-950 shadow-sm' 
+                        ? 'bg-amber-500 text-slate-950 shadow-sm font-bold' 
                         : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                 }`;
                 btn.innerText = `Slide 0${slide.id}`;
@@ -602,6 +680,20 @@
             if (el) {
                 el.scrollIntoView({ behavior: 'smooth' });
             }
+        }
+
+        function updateCalculator() {
+            const val = parseInt(document.getElementById('spendRange').value);
+            const formatted = new Intl.NumberFormat('ko-KR').format(val);
+            document.getElementById('spendDisplay').innerText = `월 ${formatted}원`;
+            
+            // Decoy value calculation
+            const externalVideoCost = 2500000;
+            const extraFee = 2000000;
+            const netGain = externalVideoCost - extraFee + Math.round(val * 0.15);
+            const formattedGain = new Intl.NumberFormat('ko-KR').format(netGain);
+            
+            document.getElementById('savingsDisplay').innerText = `월 ${formattedGain}원 상당 가치 이득`;
         }
 
         // Initialize Chart.js Visualizations
