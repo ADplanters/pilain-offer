@@ -132,14 +132,14 @@
                 <!-- Dynamic Plan Table -->
                 <div class="border border-slate-300 rounded-lg overflow-hidden my-3">
                     <div class="bg-slate-900 text-white font-bold p-3 text-xs flex justify-between items-center">
-                        <span id="planTitleDisplay">선택된 계약 플랜: 총괄 파트너십 A+안 (성과 극대화형)</span>
+                        <span id="planTitleDisplay">선택된 계약 플랜: 총괄 파트너십 A+안 (성과 극대화형 - 추천)</span>
                         <span id="planBadgeDisplay" class="bg-amber-500 text-slate-950 px-2 py-0.5 rounded font-extrabold">월 5,000,000원 (VAT 별도)</span>
                     </div>
                     <table class="w-full text-left text-xs border-collapse">
                         <tbody class="divide-y divide-slate-200">
                             <tr>
                                 <th class="p-2.5 bg-slate-100 font-semibold w-1/4 text-slate-800">사전 인프라 구축</th>
-                                <td class="p-2.5 text-slate-700" id="specInfra">공식 웹사이트 SEO 최적화, 포털 검색 등록, GA4 / UTM 이벤트 연동, UI/UX 디벨롭 자문</td>
+                                <td class="p-2.5 text-slate-700" id="specInfra">공식 웹사이트 SEO 최적화, 포털 검색 등록, GA4 / UTM 이벤트 연동, <span class="text-red-600 font-bold">UI/UX 디벨롭 자문</span></td>
                             </tr>
                             <tr>
                                 <th class="p-2.5 bg-slate-100 font-semibold text-slate-800">퍼포먼스 광고 운영</th>
@@ -147,19 +147,19 @@
                             </tr>
                             <tr>
                                 <th class="p-2.5 bg-slate-100 font-semibold text-slate-800">크리에이티브 기획·제작</th>
-                                <td class="p-2.5 text-slate-700 font-bold text-slate-900" id="specCreative">A안 항목 일체 + 전문 숏폼/비디오 영상 콘텐츠 정기 기획 및 기획·제작 (내재화)</td>
+                                <td class="p-2.5 text-slate-700 font-bold text-slate-900" id="specCreative">A안 항목 일체 + <span class="text-red-600 font-bold">전문 숏폼/비디오 영상 콘텐츠 정기 기획 및 제작 (내재화)</span></td>
                             </tr>
                             <tr>
                                 <th class="p-2.5 bg-slate-100 font-semibold text-slate-800">랜딩페이지 테스트</th>
-                                <td class="p-2.5 text-slate-700" id="specLanding">소구점별 A/B/C/D 4원화 분할 테스트 정밀 전개 (최저 CPA 발굴)</td>
+                                <td class="p-2.5 text-slate-700" id="specLanding"><span class="text-red-600 font-bold">소구점별 A/B/C/D 4원화 분할 테스트 정밀 전개 (최저 CPA 발굴)</span></td>
                             </tr>
                             <tr>
-                                <th class="p-2.5 bg-slate-100 font-semibold text-slate-800">인플루언서 섭외</th>
-                                <td class="p-2.5 text-slate-700" id="specInfluencer">10만 메가 인플루언서 1인 또는 1만 마이크로 10인 섭외 및 피드/릴스 관리 (대행비 포함)</td>
+                                <th class="p-2.5 bg-slate-100 font-semibold text-slate-800">인플루언서 마케팅</th>
+                                <td class="p-2.5 text-slate-700" id="specInfluencer"><span class="text-red-600 font-bold">50만 팔로워 보장</span> 및 <span class="text-red-600 font-bold">피드, 릴스, 스토리</span> 종합 관리 (대행비 포함)</td>
                             </tr>
                             <tr>
                                 <th class="p-2.5 bg-slate-100 font-semibold text-slate-800">언론 홍보 (PR)</th>
-                                <td class="p-2.5 text-slate-700" id="specPr">월 2회 언론 보도 기사 배포 송출 보장 (계약 기간 총 6회)</td>
+                                <td class="p-2.5 text-slate-700" id="specPr">월 1회 언론 보도 기사 배포 송출 보장 (계약 기간 총 3회)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -300,9 +300,12 @@
                 document.getElementById('planTitleDisplay').innerText = "선택된 계약 플랜: 총괄 파트너십 A안 (기본 실무형)";
                 document.getElementById('planBadgeDisplay').innerText = "월 3,000,000원 (VAT 별도)";
                 document.getElementById('feeTextDisplay').innerText = "삼백만 원 (₩3,000,000 / 부가가치세 별도)";
+                document.getElementById('specInfra').innerText = "공식 웹사이트 SEO 최적화, 포털 검색 등록, GA4 / UTM 이벤트 연동";
+                document.getElementById('specAd').innerText = "메타(Instagram/Facebook) 타깃 믹스, 네이버 SA 키워드 방어, 구글 광고 1단계 선제적 보류 관리";
                 document.getElementById('specCreative').innerText = "정적 이미지 배너, 카피라이팅 기획, 네이버 SA 키워드 문안 작성";
                 document.getElementById('specCreative').className = "p-2.5 text-slate-700";
                 document.getElementById('specLanding').innerText = "기본 A/B 2원화 분할 테스트 진행";
+                document.getElementById('specInfluencer').innerText = "10만 팔로워 보장 및 피드 게시물 전담 관리 (대행비 포함)";
                 document.getElementById('specPr').innerText = "월 1회 언론 보도 기사 배포 송출 보장 (계약 기간 총 3회)";
             } else {
                 btnAplus.className = "px-3 py-1.5 rounded-md font-semibold transition-all bg-amber-500 text-white shadow-sm";
@@ -311,10 +314,13 @@
                 document.getElementById('planTitleDisplay').innerText = "선택된 계약 플랜: 총괄 파트너십 A+안 (성과 극대화형 - 추천)";
                 document.getElementById('planBadgeDisplay').innerText = "월 5,000,000원 (VAT 별도)";
                 document.getElementById('feeTextDisplay').innerText = "오백만 원 (₩5,000,000 / 부가가치세 별도)";
-                document.getElementById('specCreative').innerText = "A안 항목 일체 + 전문 숏폼/비디오 영상 콘텐츠 정기 기획 및 기획·제작 (내재화)";
+                document.getElementById('specInfra').innerHTML = '공식 웹사이트 SEO 최적화, 포털 검색 등록, GA4 / UTM 이벤트 연동, <span class="text-red-600 font-bold">UI/UX 디벨롭 자문</span>';
+                document.getElementById('specAd').innerText = "메타(Instagram/Facebook) 타깃 믹스, 네이버 SA 키워드 방어, 구글 광고 1단계 선제적 보류 관리";
+                document.getElementById('specCreative').innerHTML = 'A안 항목 일체 + <span class="text-red-600 font-bold">전문 숏폼/비디오 영상 콘텐츠 정기 기획 및 제작 (내재화)</span>';
                 document.getElementById('specCreative').className = "p-2.5 text-slate-700 font-bold text-slate-900";
-                document.getElementById('specLanding').innerText = "소구점별 A/B/C/D 4원화 분할 테스트 정밀 전개 (최저 CPA 발굴)";
-                document.getElementById('specPr').innerText = "월 2회 언론 보도 기사 배포 송출 보장 (계약 기간 총 6회)";
+                document.getElementById('specLanding').innerHTML = '<span class="text-red-600 font-bold">소구점별 A/B/C/D 4원화 분할 테스트 정밀 전개 (최저 CPA 발굴)</span>';
+                document.getElementById('specInfluencer').innerHTML = '<span class="text-red-600 font-bold">50만 팔로워 보장</span> 및 <span class="text-red-600 font-bold">피드, 릴스, 스토리</span> 종합 관리 (대행비 포함)';
+                document.getElementById('specPr').innerText = "월 1회 언론 보도 기사 배포 송출 보장 (계약 기간 총 3회)";
             }
         }
 
