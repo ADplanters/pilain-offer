@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전략적 마케팅 대행 표준 계약서</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#FAFAFA',
+                        ink: '#0F172A',
+                        brandnavy: '#1E293B',
+                        accentgold: '#D97706',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            body { background-color: #ffffff !important; padding: 0 !important; color: #000000 !important; }
+            .contract-card { border: none !important; shadow: none !important; padding: 0 !important; max-width: 100% !important; }
+            .page-break { page-break-before: always; }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-ink font-sans antialiased min-h-screen py-8 px-4 sm:px-6">
+
+    <!-- Chosen Palette: Classic Legal Executive Palette (Warm Paper #FAFAFA, Deep Ink #0F172A, Slate Navy #1E293B, Warm Gold #D97706) -->
+    <!-- Application Structure Plan: 
+         1. Action Toolbar (Top): Print contract button, Plan type auto-selection (A vs A+), Date input, and interactive field helper.
+         2. Contract Document Header: Formal title, contract number, and legal preamble identifying Party A (Client) and Party B (Agency).
+         3. Detailed Legal Articles (Articles 1 ~ 11): Complete, legally robust wording reflecting all proposal terms:
+            - Purpose & Scope
+            - Contract Period & 3-Month Commitment
+            - Selected Service Plan (A vs A+ dynamic spec table)
+            - Agency Fee Payment & Credit Card Installment options
+            - Complete Media Budget Separation (Direct Credit Card Billing)
+            - Infrastructure & GA4/SEO setup
+            - Creative Copyright & Deliverable IP rights
+            - Confidentiality & Reporting obligations
+            - Early Termination & 30% Penalty terms
+            - Jurisdiction & Dispute resolution
+         4. Execution & Signature Block: Clean dual-column signature format for Party A and Party B with date, registration number, address, and seal/signature placeholders.
+         This structure converts proposal promises into an immediately actionable, legal contract ready for execution. -->
+    <!-- Visualization & Content Choices: 
+         - Interactive Option Switcher (HTML/JS): Allows live switching between Plan A (3,000,000 KRW) and Plan A+ (5,000,000 KRW) on the contract document before printing.
+         - Print & Download Support: Native browser print trigger formatted for A4 standard legal output.
+         - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Top Action Bar (Invisible on Print) -->
+    <div class="max-w-4xl mx-auto mb-6 bg-white p-4 rounded-xl shadow-md border border-slate-200 flex flex-wrap justify-between items-center gap-4 no-print">
+        <div class="flex items-center space-x-3">
+            <span class="text-2xl">📑</span>
+            <div>
+                <h1 class="font-bold text-slate-900 text-sm sm:text-base">브랜드 빌드업 및 마케팅 파트너십 계약서</h1>
+                <p class="text-xs text-slate-500">옵션을 선택하고 내용을 확인한 후 즉시 인쇄/PDF 저장할 수 있습니다.</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-3">
+            <div class="flex items-center bg-slate-100 rounded-lg p-1 border border-slate-200 text-xs">
+                <button id="btnSelectA" onclick="setPlan('A')" class="px-3 py-1.5 rounded-md font-semibold transition-all text-slate-600">A안 (월 300만)</button>
+                <button id="btnSelectAplus" onclick="setPlan('A+')" class="px-3 py-1.5 rounded-md font-semibold transition-all bg-amber-500 text-white shadow-sm">A+안 (월 500만 - 추천)</button>
+            </div>
+            <button onclick="window.print()" class="bg-brandnavy text-white px-4 py-2 rounded-lg text-xs sm:text-sm font-bold hover:bg-slate-800 transition-colors flex items-center space-x-1 shadow">
+                <span>🖨️ 계약서 인쇄 / PDF 다운로드</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Contract Page View -->
+    <div class="max-w-4xl mx-auto bg-white p-8 sm:p-14 rounded-2xl shadow-xl border border-slate-200 contract-card space-y-8">
+
+        <!-- Title Banner -->
+        <div class="text-center space-y-3 border-b-2 border-slate-900 pb-6">
+            <div class="text-xs font-bold text-amber-700 tracking-widest uppercase">Performance Marketing Partnership Agreement</div>
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">브랜드 빌드업 및 마케팅 파트너십 계약서</h1>
+            <p class="text-xs sm:text-sm text-slate-600">주식회사 필라인 (광고주) & 주식회사 애드플랜터스 / Gem Strategy Lab (대행사)</p>
+        </div>
+
+        <!-- Contract Preamble -->
+        <div class="text-xs sm:text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-lg border border-slate-200">
+            광고주 <strong>주식회사 필라인</strong> (이하 "갑"이라 한다)와 마케팅 대행사 <strong>주식회사 애드플랜터스</strong> (이하 "을"이라 한다)는 "갑"의 브랜드 퍼포먼스 마케팅, 크리에이티브 제작 및 마케팅 인프라 세팅 업무를 수행함에 있어 상호 간의 권리와 의무를 명확히 하고 신의성실의 원칙에 따라 다음과 같이 계약을 체결한다.
+        </div>
+
+        <!-- Articles Section -->
+        <div class="space-y-6 text-xs sm:text-sm text-slate-800 leading-relaxed">
+
+            <!-- Article 1 -->
+            <section class="space-y-1.5">
+                <h3 class="font-bold text-slate-900 text-sm sm:text-base border-l-4 border-slate-900 pl-2">제 1 조 (목적)</h3>
+                <p class="text-slate-700">
+                    본 계약은 "갑"이 추진하는 마케팅 사업의 효율적 수행을 위해 "을"에게 브랜드 총괄 퍼포먼스 마케팅, 사전 인프라 구축, 크리에이티브 기획·제작, 인플루언서 시딩 및 언론 홍보(PR) 대행 업무를 위탁하고, "을"이 이를 성실히 수행하여 "갑"의 브랜드 성장 및 마케팅 성과를 극대화하는 것을 목적으로 한다.
+                </p>
+            </section>
+
+            <!-- Article 2 -->
+            <section class="space-y-1.5">
+                <h3 class="font-bold text-slate-900 text-sm sm:text-base border-l-4 border-slate-900 pl-2">제 2 조 (계약 기간 및 최소 의무 약정)</h3>
+                <ol class="list-decimal list-inside space-y-1 text-slate-700 pl-1">
+                    <li>본 계약의 유효기간은 <strong>계약 체결일부터 3개월간</strong>으로 한다. (머신러닝 데이터 축적 및 마케팅 최적화를 위한 최소 의무 약정 기간)</li>
+                    <li>계약 만료일 30일 전까지 양사 중 어느 일방이 서면으로 계약 종료 또는 변경의 의사를 표시하지 아니하는 경우, 본 계약은 동일한 조건으로 3개월씩 자동 연장되는 것으로 본다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 3 -->
+            <section class="space-y-2">
+                <h3 class="font-bold text-slate-900 text-sm sm:text-base border-l-4 border-slate-900 pl-2">제 3 조 (대행 서비스 범위 및 선택 플랜)</h3>
+                <p class="text-slate-700">"갑"과 "을"이 합의하여 확정한 대행 서비스 범위는 다음과 같으며, 현재 선택된 대행 플랜 사양에 따라 업무를 수행한다.</p>
+
+                <!-- Dynamic Plan Table -->
+                <div class="border border-slate-300 rounded-lg overflow-hidden my-3">
+                    <div class="bg-slate-900 text-white font-bold p-3 text-xs flex justify-between items-center">
+                        <span id="planTitleDisplay">선택된 계약 플랜: 총괄 파트너십 A+안 (성과 극대화형)</span>
+                        <span id="planBadgeDisplay" class="bg-amber-500 text-slate-950 px-2 py-0.5 rounded font-extrabold">월 5,000,000원 (VAT 별도)</span>
+                    </div>
+                    <table class="w-full text-left text-xs border-collapse">
+                        <tbody class="divide-y divide-slate-200">
+                            <tr>
+                                <th class="p-2.5 bg-slate-100 font-semibold w-1/4 text-slate-800">사전 인프라 구축</th>
+                                <td class="p-2.5 text-slate-700" id="specInfra">공식 웹사이트 SEO 최적화, 포털 검색 등록, GA4 / UTM 이벤트 연동, UI/UX 디벨롭 자문</td>
+                            </tr>
+                            <tr>
+                                <th class="p-2.5 bg-slate-100 font-semibold text-slate-800">퍼포먼스 광고 운영</th>
+                                <td class="p-2.5 text-slate-700" id="specAd">메타(Instagram/Facebook) 타깃 믹스, 네이버 SA 키워드 방어, 구글 광고 1단계 선제적 보류 관리</td>
+                            </tr>
+                            <tr>
+                                <th class="p-2.5 bg-slate-100 font-semibold text-slate-800">크리에이티브 기획·제작</th>
+                                <td class="p-2.5 text-slate-700 font-bold text-slate-900" id="specCreative">A안 항목 일체 + 전문 숏폼/비디오 영상 콘텐츠 정기 기획 및 기획·제작 (내재화)</td>
+                            </tr>
+                            <tr>
+                                <th class="p-2.5 bg-slate-100 font-semibold text-slate-800">랜딩페이지 테스트</th>
+                                <td class="p-2.5 text-slate-700" id="specLanding">소구점별 A/B/C/D 4원화 분할 테스트 정밀 전개 (최저 CPA 발굴)</td>
+                            </tr>
+                            <tr>
+                                <th class="p-2.5 bg-slate-100 font-semibold text-slate-800">인플루언서 섭외</th>
+                                <td class="p-2.5 text-slate-700" id="specInfluencer">10만 메가 인플루언서 1인 또는 1만 마이크로 10인 섭외 및 피드/릴스 관리 (대행비 포함)</td>
+                            </tr>
+                            <tr>
+                                <th class="p-2.5 bg-slate-100 font-semibold text-slate-800">언론 홍보 (PR)</th>
+                                <td class="p-2.5 text-slate-700" id="specPr">월 2회 언론 보도 기사 배포 송출 보장 (계약 기간 총 6회)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Article 4 -->
+            <section class="space-y-1.5">
+                <h3 class="font-bold text-slate-900 text-sm sm:text-base border-l-4 border-slate-900 pl-2">제 4 조 (대행 수수료 및 지급 방법)</h3>
+                <ol class="list-decimal list-inside space-y-1 text-slate-700 pl-1">
+                    <li>"갑"은 "을"에게 대행 용역 수행에 대한 대가로 **월 용역 수수료 <span id="feeTextDisplay" class="font-bold underline text-slate-900">오백만 원 (₩5,000,000 / 부가가치세 별도)</span>**을 지급한다.</li>
+                    <li>지급 방식: "갑"은 매월 서비스 개시일 3일 전까지 "을"이 지정한 은행 계좌로 현금 입금하거나, "을"이 제공하는 **신용카드 결제 시스템(법인카드/개인카드 3~12개월 할부 결제 가능)**을 통해 결제한다.</li>
+                    <li>현금 입금 시 "을"은 즉시 정식 세금계산서를 발급하여야 하며, 카드 결제 시 카드 매출전표로 납세를 대체한다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 5 -->
+            <section class="space-y-1.5">
+                <h3 class="font-bold text-slate-900 text-sm sm:text-base border-l-4 border-slate-900 pl-2">제 5 조 (매체비 완벽 분리 및 직접 과금 원칙)</h3>
+                <ol class="list-decimal list-inside space-y-1 text-slate-700 pl-1">
+                    <li><strong>(재정 투명성 보장)</strong> 메타, 네이버, 구글 등 매체 광고 집행에 소요되는 실비 매체비는 제4조의 '대행 수수료'에 포함되지 않으며, 완전히 분리하여 운영한다.</li>
+                    <li>"갑"은 각 매체사 광고 계정에 "갑" 명의의 법인카드 또는 결제 카드를 직접 등록하며, 매체사에서 "갑"의 카드로 직접 실비 과금되도록 한다. "을"은 어떠한 경우에도 매체비에 마크업 수수료를 수취하지 않는다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 6 -->
+            <section class="space-y-1.5">
+                <h3 class="font-bold text-slate-900 text-sm sm:text-base border-l-4 border-slate-900 pl-2">제 6 조 (저작권 및 성과물 이용 권한)</h3>
+                <ol class="list-decimal list-inside space-y-1 text-slate-700 pl-1">
+                    <li>"을"이 본 계약을 수행하는 과정에서 제작한 영상, 정적 배너, 카피라이팅, 랜딩페이지 기획안 등 제반 성과물의 지식재산권은 계약 기간 동안 "갑"에게 배타적 이용권이 부여된다.</li>
+                    <li>본 계약이 정당하게 종료된 이후에도 계약 기간 중 이미 라이브 게재된 홍보물 및 게시물은 원칙적으로 삭제 없이 유효하게 유지될 수 있다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 7 -->
+            <section class="space-y-1.5">
+                <h3 class="font-bold text-slate-900 text-sm sm:text-base border-l-4 border-slate-900 pl-2">제 7 조 (정기 리포팅 및 데이터 공유)</h3>
+                <p class="text-slate-700">
+                    "을"은 매주 주간 실적 요약표 및 매월 종합 퍼포먼스 분석 리포트(ROAS, CPA, CVR 분석 및 소재별 성과 대조표 포함)를 작성하여 "갑"에게 보고하고, 다음 달 마케팅 개선 방향을 서면 또는 미팅으로 제시하여야 한다.
+                </p>
+            </section>
+
+            <!-- Article 8 -->
+            <section class="space-y-1.5">
+                <h3 class="font-bold text-slate-900 text-sm sm:text-base border-l-4 border-slate-900 pl-2">제 8 조 (계약의 해지 및 위약금)</h3>
+                <ol class="list-decimal list-inside space-y-1 text-slate-700 pl-1">
+                    <li>양사 중 일방이 본 계약상의 중요한 의무를 위반하고 서면 최고 후 14일 이내에 이를 시정하지 아니하는 경우, 상대방은 본 계약을 해지할 수 있다.</li>
+                    <li>제2조에 명시된 3개월의 최소 의무 약정 기간 내에 "갑"의 귀책사유 또는 단순 변심으로 인하여 계약이 중도 해지되는 경우, "갑"은 "을"에게 이미 투입된 기획·제작 공수 및 인프라 구축 비용의 보전을 위해 **잔여 약정 기간 총 대행 수수료의 30%를 위약금**으로 지급하여야 한다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 9 -->
+            <section class="space-y-1.5">
+                <h3 class="font-bold text-slate-900 text-sm sm:text-base border-l-4 border-slate-900 pl-2">제 9 조 (비밀유지 의무)</h3>
+                <p class="text-slate-700">
+                    양사는 본 계약의 이행 과정에서 취득한 상대방의 영업비밀, 고객 정보, 마케팅 노하우 및 단가 정보를 상대방의 사전 서면 동의 없이 제3자에게 누설하거나 본 계약 외의 목적으로 사용하여서는 아니 되며, 이 의무는 계약 종료 후 2년간 유효하다.
+                </p>
+            </section>
+
+            <!-- Article 10 -->
+            <section class="space-y-1.5">
+                <h3 class="font-bold text-slate-900 text-sm sm:text-base border-l-4 border-slate-900 pl-2">제 10 조 (분쟁의 해결 및 관할 법원)</h3>
+                <p class="text-slate-700">
+                    본 계약과 관련하여 발생되는 모든 분쟁은 양사가 상호 신의성실의 원칙에 입각하여 협의하여 해결하되, 협의가 성립되지 아니할 경우 "을"의 본점 소재지를 관할하는 법원을 전속 관할 법원으로 한다.
+                </p>
+            </section>
+
+            <!-- Article 11 -->
+            <section class="space-y-1.5">
+                <h3 class="font-bold text-slate-900 text-sm sm:text-base border-l-4 border-slate-900 pl-2">제 11 조 (기타)</h3>
+                <p class="text-slate-700">
+                    본 계약서에 명시되지 아니한 사항은 관계 법령 및 상관례에 따르며, 본 계약 체결의 증거로서 계약서 2부를 작성하여 "갑"과 "을"이 기명날인한 후 각각 1부씩 보관한다.
+                </p>
+            </section>
+
+        </div>
+
+        <!-- Execution Date -->
+        <div class="text-center my-8 pt-4 border-t border-slate-200">
+            <p class="text-sm font-bold text-slate-900">
+                계약 체결일자: <span id="currentDateDisplay" class="border-b border-slate-400 px-3 py-1">2026년 10월 12일</span>
+            </p>
+        </div>
+
+        <!-- Signature Block -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4 text-xs sm:text-sm">
+            <!-- Party A (Client) -->
+            <div class="p-5 border-2 border-slate-800 rounded-xl space-y-3 bg-slate-50/50">
+                <div class="font-extrabold text-slate-900 text-sm border-b border-slate-300 pb-2 flex justify-between">
+                    <span>"갑" (광고주)</span>
+                    <span class="text-slate-400 font-normal">[인/서명]</span>
+                </div>
+                <div class="space-y-1.5 text-slate-700">
+                    <p><span class="font-semibold text-slate-900">회사명:</span> 주식회사 필라인</p>
+                    <p><span class="font-semibold text-slate-900">사업자등록번호:</span> 120-88-XXXXX</p>
+                    <p><span class="font-semibold text-slate-900">주소:</span> 서울특별시 강남구 테헤란로 123</p>
+                    <p><span class="font-semibold text-slate-900">대표이사:</span> 홍 길 동 (직인 생략 / 서명)</p>
+                    <p><span class="font-semibold text-slate-900">연락처:</span> 02-555-1234</p>
+                </div>
+            </div>
+
+            <!-- Party B (Agency) -->
+            <div class="p-5 border-2 border-slate-800 rounded-xl space-y-3 bg-slate-50/50">
+                <div class="font-extrabold text-slate-900 text-sm border-b border-slate-300 pb-2 flex justify-between">
+                    <span>"을" (대행사)</span>
+                    <span class="text-amber-600 font-bold">[직인]</span>
+                </div>
+                <div class="space-y-1.5 text-slate-700">
+                    <p><span class="font-semibold text-slate-900">회사명:</span> 주식회사 애드플랜터스 (Gem Strategy Lab)</p>
+                    <p><span class="font-semibold text-slate-900">사업자등록번호:</span> 211-87-YYYYY</p>
+                    <p><span class="font-semibold text-slate-900">주소:</span> 서울특별시 서초구 서초대로 456, 8층</p>
+                    <p><span class="font-semibold text-slate-900">대표이사:</span> 이 제 안 (인)</p>
+                    <p><span class="font-semibold text-slate-900">연락처:</span> 02-888-9999</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Document Footer Code -->
+        <div class="text-center text-[10px] text-slate-400 pt-6 border-t border-slate-100">
+            CONFIDENTIAL & LEGAL BINDING DOCUMENT • FORM REF: GEM-MKT-2026-v1.4
+        </div>
+
+    </div>
+
+    <!-- JS Logic for Dynamic Plan Switching and Date Formatting -->
+    <script>
+        let currentPlan = 'A+';
+
+        function setPlan(plan) {
+            currentPlan = plan;
+            const btnA = document.getElementById('btnSelectA');
+            const btnAplus = document.getElementById('btnSelectAplus');
+
+            if (plan === 'A') {
+                btnA.className = "px-3 py-1.5 rounded-md font-semibold transition-all bg-slate-800 text-white shadow-sm";
+                btnAplus.className = "px-3 py-1.5 rounded-md font-semibold transition-all text-slate-600 hover:bg-slate-200";
+
+                document.getElementById('planTitleDisplay').innerText = "선택된 계약 플랜: 총괄 파트너십 A안 (기본 실무형)";
+                document.getElementById('planBadgeDisplay').innerText = "월 3,000,000원 (VAT 별도)";
+                document.getElementById('feeTextDisplay').innerText = "삼백만 원 (₩3,000,000 / 부가가치세 별도)";
+                document.getElementById('specCreative').innerText = "정적 이미지 배너, 카피라이팅 기획, 네이버 SA 키워드 문안 작성";
+                document.getElementById('specCreative').className = "p-2.5 text-slate-700";
+                document.getElementById('specLanding').innerText = "기본 A/B 2원화 분할 테스트 진행";
+                document.getElementById('specPr').innerText = "월 1회 언론 보도 기사 배포 송출 보장 (계약 기간 총 3회)";
+            } else {
+                btnAplus.className = "px-3 py-1.5 rounded-md font-semibold transition-all bg-amber-500 text-white shadow-sm";
+                btnA.className = "px-3 py-1.5 rounded-md font-semibold transition-all text-slate-600 hover:bg-slate-200";
+
+                document.getElementById('planTitleDisplay').innerText = "선택된 계약 플랜: 총괄 파트너십 A+안 (성과 극대화형 - 추천)";
+                document.getElementById('planBadgeDisplay').innerText = "월 5,000,000원 (VAT 별도)";
+                document.getElementById('feeTextDisplay').innerText = "오백만 원 (₩5,000,000 / 부가가치세 별도)";
+                document.getElementById('specCreative').innerText = "A안 항목 일체 + 전문 숏폼/비디오 영상 콘텐츠 정기 기획 및 기획·제작 (내재화)";
+                document.getElementById('specCreative').className = "p-2.5 text-slate-700 font-bold text-slate-900";
+                document.getElementById('specLanding').innerText = "소구점별 A/B/C/D 4원화 분할 테스트 정밀 전개 (최저 CPA 발굴)";
+                document.getElementById('specPr').innerText = "월 2회 언론 보도 기사 배포 송출 보장 (계약 기간 총 6회)";
+            }
+        }
+
+        // Set Today's Date by default
+        window.addEventListener('DOMContentLoaded', () => {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = today.getMonth() + 1;
+            const date = today.getDate();
+            document.getElementById('currentDateDisplay').innerText = `${year}년 ${month}월 ${date}일`;
+        });
+    </script>
+</body>
+</html>
